@@ -5,6 +5,35 @@
   | 메소드 | 경로  | 설명             |
   | ------ | ----- | ---------------- |
   | GET    | /TODO | TODO list 보내기 |
+#### 요청헤더
+
+```
+Content-Type: application/json
+```
+
+#### 응답 바디
+
+##### 성공
+
+```json
+{
+    "status": 200,
+    "message": "로그인 성공",
+    "data": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoiY29jbyIsImlzcyI6IkRvSVRTT1BUIn0.Rplge4ISuuCrFzrddjOl55TCeRQ2QUD9yuwSMmOZ5X0"
+    }
+}
+```
+
+##### 실패
+
+```json
+{
+    "status": 400,
+    "message": "로그인 실패",
+    "data": null
+}
+```
 
 * TODO 항목의 제목과 내용 수정
 
